@@ -1,12 +1,13 @@
 // IMPORT useState
-
+import { useState } from "react";
 import React from 'react';
 import './styles.css';
 // IMPORT imageData.js AND STORE IT IN A VARIABLE CALLED imagesArr
-
+import imagesArr from './imageData'
 export default function App() {
   // USE useState TO CREATE  [bigImage, setBigImage] 
   // AND SET IT TO THE IMAGE URL OF THE FIRST ELEMENT IN THE ARRAY
+  const [bigImage, setBigImage] = useState(imagesArr)
 
   // CREATE A HANDLE CLICK FUNCTION THAT ACCEPTS AN IMAGE URL
   // THE FUNCTION SHOULD CALL setBigImage AND PASS IT THE URL
