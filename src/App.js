@@ -20,6 +20,7 @@ const handleClick = (imgUrl) => {
 
   // ASSIGN ALL OF THE PROPERTIES THAT IT NEEDS: src, alt, className, key INCLUDING AN onClick EVENT THAT CALLS THE HANDLE EVENT FUNCTION AND PASSES IT THE IMG URL
   const images = imagesArr.map((ele, index) => {
+    //you can put a ternary on the style property and add a border right here!
     return (
       <img
         className="thumb"
@@ -27,6 +28,9 @@ const handleClick = (imgUrl) => {
         alt={ele.city}
         key={index}
         onClick={() => handleClick(ele.img)}
+        style={{
+          border: ele.img === bigImage ?  '4px solid green' : ''
+        }}
       />
     );
   });
